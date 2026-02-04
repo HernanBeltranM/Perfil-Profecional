@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV de Hernán Yecid Beltrán Muñoz - Trainee Developer en Globant">
     <title>Hernán Beltrán - CV Profesional</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Calendar Appointment Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header con animación de partículas -->
@@ -281,6 +285,12 @@
                     Estoy siempre abierto a nuevas oportunidades y colaboraciones. 
                     ¡No dudes en contactarme!
                 </p>
+                
+                <!-- Google Calendar Appointment Scheduling -->
+                <div class="calendar-scheduling-container">
+                    <div id="calendar-button-target"></div>
+                </div>
+                
                 <div class="contact-info">
                     <a href="mailto:hernanbeltranm@gmail.com" class="contact-item">
                         <div class="contact-icon">
@@ -313,6 +323,29 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Google Calendar Appointment Scheduling -->
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+    (function() {
+      var target = document.getElementById('calendar-button-target');
+      if (target) {
+        window.addEventListener('load', function() {
+          if (window.calendar && window.calendar.schedulingButton) {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2gQR4oJTxHoiBbBLU8kXdaL4NUKvrgCA2q6qISo6GLDoQb4tZ2RczyEqGoDHBgAPXf4qsA5Xcb?gv=true',
+              color: '#039BE5',
+              label: "Programar una cita con hernan",
+              target,
+            });
+          }
+        });
+      }
+    })();
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
