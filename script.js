@@ -106,7 +106,7 @@ if (skillsSection) {
 // Animación de Entrada para Elementos
 // ========================================
 const observeElements = () => {
-    const elements = document.querySelectorAll('.skill-category, .timeline-item, .education-card, .contact-item');
+    const elements = document.querySelectorAll('.skill-category, .timeline-item, .education-card, .project-card, .article-card, .testimonial-card, .contact-item');
     
     const elementObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
@@ -263,7 +263,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Efecto de Hover en Cards
 // ========================================
 function addCardEffects() {
-    const cards = document.querySelectorAll('.skill-category, .education-card, .timeline-content');
+    const cards = document.querySelectorAll('.skill-category, .education-card, .project-card, .article-card, .testimonial-card, .timeline-content');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
