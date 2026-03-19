@@ -305,6 +305,20 @@ body {
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
 }
 
+.btn-cv {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+    border: 2px solid transparent;
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(255, 0, 110, 0.6), var(--shadow-xl);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
 .scroll-indicator {
     margin-top: 3rem;
     animation: bounce 2s infinite;
